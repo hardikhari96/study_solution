@@ -50,6 +50,35 @@ i. HOMEPAGE
 GLOBAL SETTINGS 
 --------------------------------------------------------------------*/
 
+
+
+
+
+
+
+/*--------------------------custom css by harikrushna patel -------------------------*/
+
+.harilogo{
+	
+	border-radius:50%;
+	width:100px;
+	height:100px;
+	
+
+}
+
+
+
+/*--------------------------End of custom css by harikrushna patel -------------------------*/
+
+
+
+
+
+
+
+
+
 .alignleft {
     float        : left;
     margin-right : 15px;
