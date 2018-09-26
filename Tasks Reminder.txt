@@ -1,8 +1,8 @@
 index page     ====    		95%
 about page     ====		90%
 help page      ====		0%
-donet us page  ====		0%
-contect us page ===		0%
+donet us page  ====		99%
+contect us page ===		99%
 
 
 
@@ -11,8 +11,18 @@ contect us page ===		0%
 
 Then ===== 
 
-1 ) Course Page			0%
-2 ) Exam Papers page		0%
+1 ) Course Page			95%
+
+	
+
+
+
+2 ) Exam Papers page		95%
+
+
+
+
+
 
 https://b24-ygzz7i.bitrix24.com
 Login: hardikhari96@pay-mon.com
