@@ -28,6 +28,20 @@
 		<link rel="stylesheet" href="css/responsive.css" />
 		<!-- favicon -->
 		<link rel="icon" href="favicon.png" sizes="18x16" type="image/png"> 
+        <script>
+        
+         var config = {
+             apiKey: "AIzaSyDFV1ZdUUnNMaG0BHpnjGMwsPWylb2IBMQ",
+             authDomain: "totaldatasolution-197019.firebaseapp.com",
+             databaseURL: "https://totaldatasolution-197019.firebaseio.com",
+             projectId: "totaldatasolution-197019",
+             storageBucket: "",
+             messagingSenderId: "128917621871"
+                };
+            firebase.initializeApp(config);
+
+        </script>
+        
 	</head>
 
 
@@ -146,7 +160,7 @@
 
 					<div class="row">
 				        <div class="col-md-7">
-				            <form id="contactForm" action="sendemail.php" method="POST"  role="form">
+				            <form id="contactForm">
 				                <div class="form-group">
 				                    <label>Name</label>
 				                    <input id="name" name="name" type="text" class="form-control" required="" required="" placeholder="Your name">
@@ -155,7 +169,7 @@
 				                    <div class="col-md-6">
 				                        <div class="form-group">
 				                            <label>Email</label>
-				                            <input id="email" name="email" type="email" class="form-control" required="" placeholder="Email address">
+				                            <input id="email" id="user_id" name="email" type="email" class="form-control" required="" placeholder="Email address">
 				                        </div>
 				                    </div>
 				                    <div class="col-md-6">
@@ -173,7 +187,7 @@
 				                    <label>Message</label>
 				                    <textarea id="message" name="message" class="form-control" required="" placeholder="Write you message here..." style="height:100px;"></textarea>
 				                </div>
-				                <button type="submit" class="btn btn-primary">Send message</button>
+				                <button type="submit" class="btn btn-primary" onclick="save_user()">Send message</button>
 				            </form>
 				        </div>
 
@@ -362,6 +376,10 @@
 
 		<!-- Scripts js -->
 		<script src="js/scripts.js"></script>
+        <!--Firebase---->
+        <script src="https://www.gstatic.com/firebasejs/5.5.3/firebase.js"></script>
+        <!--Firebase---->
+        <script src="js/firebase.js"></script>
 
 	</body>
 </html>
