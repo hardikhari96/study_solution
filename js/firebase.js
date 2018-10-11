@@ -6,9 +6,7 @@ var user_sub = document.getElementById('subject').value;
 var user_msg = document.getElementById('message').value;
 
 
-Function save_user(){
-    
-    
+Function save_user() {
+
+
 };
-
-
