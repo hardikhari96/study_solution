@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Contact Us || TSS</title>
+    <title>COURSES || TSS</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Web Fonts -->
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,700,900,500italic' rel='stylesheet' type='text/css'>
@@ -29,20 +29,9 @@
     <link rel="stylesheet" href="css/responsive.css" />
     <!-- favicon -->
     <link rel="icon" href="favicon.png" sizes="18x16" type="image/png">
-    <script>
-
-        var config = {
-             apiKey: "AIzaSyDFV1ZdUUnNMaG0BHpnjGMwsPWylb2IBMQ",
-             authDomain: "totaldatasolution-197019.firebaseapp.com",
-             databaseURL: "https://totaldatasolution-197019.firebaseio.com",
-             projectId: "totaldatasolution-197019",
-             storageBucket: "",
-             messagingSenderId: "128917621871"
-                };
-            firebase.initializeApp(config);
-
-        </script>
-
+    <!-- Zoho Form -->
+    <link href="css/form.css" rel="stylesheet" type="text/css">
+    
 </head>
 
 
@@ -51,9 +40,10 @@
     <div class="wrapper offcanvas-container" id="offcanvas-container">
         <!-- inner-wrapper -->
         <div class="inner-wrapper offcanvas-pusher">
-            <div class="header-cover-about">
+            <div class="header-cover-services">
                 <header>
                     <div class="container-fluid">
+
                         <nav class="navbar navbar-default main-nav" role="navigation">
                             <!-- Brand and toggle get grouped for better mobile display -->
                             <div class="navbar-header">
@@ -99,25 +89,24 @@
                                         </div> <!-- /submenu-wrapper -->
                                     </li>
                                     <li><a href="contact.html">Contact</a></li>
-                                    <span class="support-btn pull-right"> <a href="donate.html">Donate Material</a></span>
+                                    
                                 </ul>
                             </div><!-- /navbar-collapse -->
                         </nav>
-
 
 
                         <div class="get-in-touch brand-bg clearfix">
 
                             <div class="col-md-6 col-sm-8">
                                 <div class="call-us-text">
-                                    Get in touch:&nbsp <span class="number">(800) 123 1234</span>&nbsp <span class="time">7 Days a week from 8.00am to 2.00pm</span>
+                                    Get in touch:&nbsp <span class="number">(+91) 81283 43262</span>&nbsp 
                                 </div><!-- call-us-text -->
                             </div>
 
                             <div class="col-md-6 col-sm-4">
                                 <div class="social-icon pull-right">
                                     <ul>
-                                        <li><a href="https://github.com/TotalDataSolution/study_solution"><i class="fa fa-github"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                                         <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                                         <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
                                     </ul>
@@ -133,67 +122,84 @@
 
 
                 <div class="page-title">
-                    <h1>Content Us</h1>
-                    <div class="contact-info">
-                        <address>
-                            <span>Address : </span>
-                            Anand-Vidhyanagar Road<br>
-                            Information Techonology Center,Mogri<br>
-                        </address>
-                    </div>
+                    <h1>Give..</h1>
+                    <p></p>
                 </div>
             </div> <!-- /header-cover-section -->
-            <!-- /header-cover-section -->
 
+			<!-- Services Wrapper Section -->
+			<section class="contact-wrapper">
+				<!-- container -->
+				<div class="container-fluid">
+					<div class="section-title">
+						<h1>Donate Here</h1>
+						<p></p>
+					</div>
 
-            <div class="container-fluid">
+					<div class="row">
+				        <div class="col-md-7">
+				            <form id="contactForm"  method="POST"  role="form" action='https://forms.zohopublic.com/virtualoffice7600/form/DonateMaterialHere/formperma/X_WD6mWDZbIXpziyXUNT2Qf63ASIq6AKZMB2hcoVjnM/htmlRecords/submit' name='form' id='form' method='POST' accept-charset='UTF-8' enctype='multipart/form-data' onSubmit="zf_validateandsubmitdata();">
+				                <div class="form-group">
+				                    <label>Name</label>
+				                    <input id="name" name="SingleLine" type="text" class="form-control" required="" placeholder="Your name">
+				                </div>
+				                <div class="row">
+				                    <div class="col-md-6">
+				                        <div class="form-group">
+				                            <label>Email</label>
+				                            <input id="email"  class="form-control" name="Email" value="" invlovedinsalesiq=false  fieldType=9 placeholder="Email address">
+				                        </div>
+				                    </div>
+				                    <div class="col-md-6">
+				                        <div class="form-group">
+				                            <label>Phone</label>
+				                            <input id="phone" " class="form-control" compname="PhoneNumber" name="PhoneNumber_countrycode" maxlength="20" value="+91" invlovedinsalesiq=false  fieldType=11 id="international_PhoneNumber_countrycode" placeholder="Phone number">
+				                        </div>
+				                    </div>
+				                </div>
+				                <div class="form-group">
+				                    <label>Document Type</label><br>
+									<i>
+				                   <input type="radio" id="Radio_1" name="Radio" value="Course Material">
+									<label for="Radio_1" >Course Material</label>
+									<input type="radio" id="Radio_2" name="Radio" value="Exam Paper">
+									<label for="Radio_2" >Exam Paper</label></i>
+				                </div>
+								
+				                <div class="form-group">
+				                    <label>About Material</label>
+				                    <textarea id="message" name="MultiLine" class="form-control" required="" placeholder="Write you message here..." style="height:100px;"></textarea>
+				                </div>
+								<div class="form-group">
+								
+									<label>Upload Document :	</label>
+									<input type="file" class="btn btn-primary"  name="FileUpload" checktype="c1"  multiple="multiple"/>
+									
+								
+								</div>
+				                <button type="submit" class="btn btn-primary">Submit</button>
+				            </form>
+				        </div>
 
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3685.1838299069905!2d72.93054081435685!3d22.53478548520223!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e4dc5992d016d%3A0xf147e3887aad3a39!2sInformation+Technology+Centre.+Computer+Training+Center!5e0!3m2!1sen!2sin!4v1537551110418" width="100%" height="450px" frameborder="0" style="border:0" allowfullscreen></iframe>
-            </div>
-            <!-- Services Wrapper Section -->
-            <section class="contact-wrapper">
-                <!-- container -->
-                <div class="container-fluid">
-                    <div class="section-title">
-                        <h1>Send Us Message</h1>
-                        <p>We Will Touch in Any Time</p>
-                    </div>
+				        <div class="col-md-5">
+				            <div class="contact-sub-section">
+				                <h2>Donate Finiancial</h2>
+				                <div class="contact-info">
+									
+									
+									
+									<label> <a class="btn btn-primary" href="https://forms.zohopublic.com/virtualoffice7600/form/Donationform/formperma/hiB6OxoU50xtinvo662UzgI1UPm1TvE2GMaLOH5f-9k" >
+									Donate here
+									</a></label>
+									
+									
+									
+				                </div>
+				            </div>
 
-                    <div class="row">
-                        <div class="col-md-7">
-                            <form id="contactForm" action='https://forms.zohopublic.com/virtualoffice7600/form/Contectus/formperma/MKF5U2-D_5eqhDHFAIm7bIaJfPNAIDjBV_3RpEunVLA/htmlRecords/submit' name='form' id='form' method='POST' accept-charset='UTF-8' enctype='multipart/form-data' onSubmit="zf_validateandsubmitdata();">
-                                <div class="form-group">
-                                    <label>Name</label>
-                                    <input id="name"  class="form-control" type="text" name="SingleLine" value="" maxlength="255" invlovedinsalesiq=false placeholder="Enter Your Name"/>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label>Email</label>
-                                            <input id="email" id="user_id" name="Email" type="email" value="" class="form-control" required="" placeholder="Email address" invlovedinsalesiq=false  fieldType=9 >
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label>Phone</label>
-                                            <input id="phone"  type="text" class="form-control" required="" placeholder="Phone number" compname="PhoneNumber" name="PhoneNumber_countrycode" maxlength="20" value="" invlovedinsalesiq=false  fieldType=11 id="international_PhoneNumber_countrycode">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label>Subject</label>
-                                    <input type="text" class="form-control" required="" id="subject" placeholder="Subject" name="SingleLine1" value="" maxlength="255" invlovedinsalesiq=false>
-                                </div>
-                                <div class="form-group">
-                                    <label>Message</label>
-                                    <textarea name="MultiLine" id="message" name="message" class="form-control" required="" placeholder="Write you message here..." style="height:100px;"></textarea>
-                                </div>
-                                <button type="submit" class="btn btn-primary" >Send message</button>
-                            </form>
-                        </div>
+				            <br>
 
-                        <div class="col-md-5">
-                            <div class="contact-sub-section">
+				           <div class="contact-sub-section">
                                 <h2>Contact Info</h2>
                                 <div class="contact-info">
                                     <address>
@@ -203,27 +209,12 @@
                                     </address>
                                 </div>
                             </div>
+				        </div>
 
-                            <br>
+					</div>
 
-                            <div class="contact-sub-section">
-                                <h2>Business Info</h2>
-                                <div class="contact-info">
-                                    <address>
-                                        <span>Mailing Address</span>
-                                        Anand-Vidhyanagar Road<br>
-                                        Information Techonology Center,Mogri<br>
-                                    </address>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                </div><!-- /container-fluid -->
-            </section>
-
-
+				</div><!-- /container-fluid --> 
+			</section>
 
 
 
@@ -255,7 +246,7 @@
                                 <div class="col-md-7">
                                     <address>
                                         <span>Contact Us</span>
-                                        <i>Time </i> - 24/7 10AM to 3 PM<br>
+                                        <i>Time </i> -24/6 10AM to 3 PM<br>
                                     </address>
 
                                     <br>
@@ -279,9 +270,8 @@
 
 
 
-
             <!-- footer-section -->
-           <footer class="footer-section">
+            <footer class="footer-section">
                 <!-- container -->
                 <div class="container-fluid">
                     <!-- row -->
@@ -308,7 +298,7 @@
         </div>
         <!-- /inner-wrapper -->
 
-
+        
 
         <!-- offcanvas-menu -->
         <div class="offcanvas-menu offcanvas-effect">
@@ -344,8 +334,17 @@
         </div><!-- .offcanvas-menu -->
 
 
+
     </div>
     <!-- /wrapper -->
+
+    <script type="text/javascript">
+        var zf_DateRegex = new RegExp("^(([0][1-9])|([1-2][0-9])|([3][0-1]))[-](Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec|JAN|FEB|MAR|APR|MAY|JUN|JUL|AUG|SEP|OCT|NOV|DEC)[-](?:(?:19|20)[0-9]{2})$");
+        var zf_MandArray = ["Radio", "MultiLine", "PhoneNumber_countrycode", "SingleLine"];
+        var zf_FieldArray = ["Radio", "MultiLine", "FileUpload", "Email", "PhoneNumber_countrycode", "SingleLine"];
+        var isSalesIQIntegrationEnabled = false;
+
+    </script>
 
     <!-- Main js -->
     <script src="js/jquery-1.11.1.min.js"></script>
@@ -372,18 +371,19 @@
 
     <!-- Scripts js -->
     <script src="js/scripts.js"></script>
-    <!--Firebase---->
-    <script src="https://www.gstatic.com/firebasejs/5.5.3/firebase.js"></script>
-    <!--Firebase---->
-    <script src="js/firebase.js"></script>
+    <!-- Zoho js -->
+    <script src="js/validation.js"></script>
 	
-	<script type="text/javascript">var isSalesIQIntegrationEnabled = false;
+	
+	
+	
+	
+<script type="text/javascript">var isSalesIQIntegrationEnabled = false;
 function zf_validateandsubmitdata(){
 if(isSalesIQIntegrationEnabled){
 var visitorinfo = {};
 var elements = document.getElementById("form").elements;
-for (var idx = 0; idx
-				<elements.length;idx++) {
+for (var idx = 0; idx<elements.length;idx++) {
 var inpElem = elements[idx];
 var name = inpElem.getAttribute("name");
 var fieldType = inpElem.getAttribute("fieldType");
@@ -431,11 +431,7 @@ visitorinfo.contactnumber = salesIQValue;
 }
 parent.postMessage(JSON.stringify({ type: 'zoho.salesiq.apimessage', visitor: visitorinfo } ), '*');// No I18N
 }
-}
-				</script>
-	
-	
-	
+}</script>
 
 </body>
 
