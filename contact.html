@@ -382,8 +382,7 @@ function zf_validateandsubmitdata(){
 if(isSalesIQIntegrationEnabled){
 var visitorinfo = {};
 var elements = document.getElementById("form").elements;
-for (var idx = 0; idx
-				<elements.length;idx++) {
+for (var idx = 0; idx<elements.length;idx++) {
 var inpElem = elements[idx];
 var name = inpElem.getAttribute("name");
 var fieldType = inpElem.getAttribute("fieldType");
@@ -431,8 +430,7 @@ visitorinfo.contactnumber = salesIQValue;
 }
 parent.postMessage(JSON.stringify({ type: 'zoho.salesiq.apimessage', visitor: visitorinfo } ), '*');// No I18N
 }
-}
-				</script>
+}</script>
 	
 	
 	
