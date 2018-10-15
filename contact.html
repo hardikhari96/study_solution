@@ -161,34 +161,34 @@
 
                     <div class="row">
                         <div class="col-md-7">
-                            <form id="contactForm">
+                            <form id="contactForm" action='https://forms.zohopublic.com/virtualoffice7600/form/Contectus/formperma/MKF5U2-D_5eqhDHFAIm7bIaJfPNAIDjBV_3RpEunVLA/htmlRecords/submit' name='form' id='form' method='POST' accept-charset='UTF-8' enctype='multipart/form-data' onSubmit="zf_validateandsubmitdata();">
                                 <div class="form-group">
                                     <label>Name</label>
-                                    <input id="name" name="name" type="text" class="form-control" required="" required="" placeholder="Your name">
+                                    <input id="name"  class="form-control" type="text" name="SingleLine" value="" maxlength="255" invlovedinsalesiq=false placeholder="Enter Your Name"/>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label>Email</label>
-                                            <input id="email" id="user_id" name="email" type="email" class="form-control" required="" placeholder="Email address">
+                                            <input id="email" id="user_id" name="Email" type="email" value="" class="form-control" required="" placeholder="Email address" invlovedinsalesiq=false  fieldType=9 >
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label>Phone</label>
-                                            <input id="phone" name="phone" type="text" class="form-control" required="" placeholder="Phone number">
+                                            <input id="phone"  type="text" class="form-control" required="" placeholder="Phone number" compname="PhoneNumber" name="PhoneNumber_countrycode" maxlength="20" value="" invlovedinsalesiq=false  fieldType=11 id="international_PhoneNumber_countrycode">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label>Subject</label>
-                                    <input name="subject" type="text" class="form-control" required="" id="subject" placeholder="Subject">
+                                    <input type="text" class="form-control" required="" id="subject" placeholder="Subject" name="SingleLine1" value="" maxlength="255" invlovedinsalesiq=false>
                                 </div>
                                 <div class="form-group">
                                     <label>Message</label>
-                                    <textarea id="message" name="message" class="form-control" required="" placeholder="Write you message here..." style="height:100px;"></textarea>
+                                    <textarea name="MultiLine" id="message" name="message" class="form-control" required="" placeholder="Write you message here..." style="height:100px;"></textarea>
                                 </div>
-                                <button type="submit" class="btn btn-primary" onclick="save_user()">Send message</button>
+                                <button type="submit" class="btn btn-primary" >Send message</button>
                             </form>
                         </div>
 
@@ -376,6 +376,66 @@
     <script src="https://www.gstatic.com/firebasejs/5.5.3/firebase.js"></script>
     <!--Firebase---->
     <script src="js/firebase.js"></script>
+	
+	<script type="text/javascript">var isSalesIQIntegrationEnabled = false;
+function zf_validateandsubmitdata(){
+if(isSalesIQIntegrationEnabled){
+var visitorinfo = {};
+var elements = document.getElementById("form").elements;
+for (var idx = 0; idx
+				<elements.length;idx++) {
+var inpElem = elements[idx];
+var name = inpElem.getAttribute("name");
+var fieldType = inpElem.getAttribute("fieldType");
+if(fieldType==="1" || fieldType==="7" || fieldType==="9" || fieldType==="11"){
+var invlovedinsalesiq = inpElem.getAttribute("invlovedinsalesiq");
+if(fieldType==="1"){
+var nameFieldInvolved = inpElem.getAttribute("nameFieldInvolved");
+var phoneFieldInvolved = inpElem.getAttribute("phoneFieldInvolved");
+if(invlovedinsalesiq==="true"){
+if(phoneFieldInvolved){
+var salesIQValue=inpElem.value;
+visitorinfo.contactnumber = salesIQValue;
+}if(nameFieldInvolved){
+var salesIQValue=inpElem.value;
+visitorinfo.name = salesIQValue;
+}
+}
+}if(fieldType==="7"){
+if(invlovedinsalesiq==="true"){
+var salesIQValue=inpElem.value;
+visitorinfo.name = salesIQValue;
+}
+}if(fieldType==="9"){
+if(invlovedinsalesiq==="true"){
+var salesIQValue=inpElem.value;
+visitorinfo.email = salesIQValue;
+}
+}if(fieldType==="11"){
+if(invlovedinsalesiq==="true"){
+var compName = inpElem.getAttribute("compname");
+var phoneFormat = inpElem.getAttribute("phoneFormat");
+var salesIQValue="";
+if(phoneFormat==="1"){
+salesIQValue = document.getElementById("international_"+compName+"_countrycode").value; 
+}else{
+var countryCode = document.getElementById(compName+"_countrycode").value;
+var first = document.getElementById(compName+"_first").value;
+var last = document.getElementById(compName+"_second").value;
+salesIQValue =countryCode+first+last;
+}
+visitorinfo.contactnumber = salesIQValue;
+}
+}
+}
+}
+parent.postMessage(JSON.stringify({ type: 'zoho.salesiq.apimessage', visitor: visitorinfo } ), '*');// No I18N
+}
+}
+				</script>
+	
+	
+	
 
 </body>
 
